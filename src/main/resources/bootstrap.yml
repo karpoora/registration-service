@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: registration-service
+
+eureka:         #tells about the Eureka server details and its refresh time
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+#      defaultZone: https://service-registry-app.herokuapp.com/eureka
+      defaultZone: http://35.229.67.158:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
